@@ -53,6 +53,12 @@ python3 finite/verify.py
 python3 verify_convexity.py
 ```
 
+## Recent literature
+
+As recently as November 11, 2026, Benedek Váli's paper [The Merino–Welsh conjecture for sparse and dense graphs](https://arxiv.org/abs/2611.15008) discusses the convexity statement as a conjectured strengthening of Merino–Welsh, without reporting a general counterexample.
+
+This provides evidence that the conjecture was still treated as unresolved in recent literature, although historical priority remains unconfirmed.
+
 ## Research status and attribution
 
 The 19-vertex disproof has a complete Lean formalization and recorded successful kernel checks. The planar and infinite-family results are not Lean-formalized. This work has not undergone external peer review. The precise overlap with Hiraishi, Imai, Moriyama, Okamura and Shiroshita's 2019 proceedings paper, *Smallest Counterexamples for Convexity and Log-concavity of the Tutte Polynomial*, remains unresolved because its full text was not obtained. No claim of first-discovery priority or minimality is made. Independent review is welcome.
