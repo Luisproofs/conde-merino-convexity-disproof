@@ -70,4 +70,4 @@ With $(q)_\ell=q(q-1)\cdots(q-\ell+1)$, sum $m(q)_\ell y^e$ and divide by $qu^4$
 
 The size of a smallest counterexample remains undetermined. The overlap with Hiraishi et al.'s 2019 proceedings paper remains unresolved. [Priority record](../review.md)
 
-The finite disproof has since been formalized in Lean 4 using the rational midpoint certificate. See the [Lean proof and verification instructions](../lean/README.md).
+The rational midpoint certificate is now formalized in Lean 4, including the equivalence of the recursive Tutte evaluation with the classical rank-subset definition. See [formal verification](../lean/README.md).

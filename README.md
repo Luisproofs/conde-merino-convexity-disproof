@@ -22,6 +22,9 @@ This contradicts convexity on the segment from (0,2) to (2,0). It does **not** d
 
 ## Proofs and verification
 
+- [Research preprint (PDF)](preprint/conde-merino.pdf)
+- [LaTeX source](preprint/conde-merino.tex)
+
 - [Elementary proof of the 19-vertex counterexample](finite/proof.md)
 - [Lean 4 source and instructions](lean/README.md)
 - [Final Lean theorem](lean/CondeMerino.lean): `CondeMerino.not_publishedConjecture`
@@ -33,6 +36,8 @@ This contradicts convexity on the segment from (0,2) to (2,0). It does **not** d
 - [Separate large-girth infinite-family argument](convexity-proof.md)
 - [Literature and priority assessment](review.md)
 
+The strengthened Lean development proves `CondeMerino.tutte_eq_classicalTutte`, the general identity between deletion–contraction and the classical rank-subset definition for finite undirected multigraphs, and `CondeMerino.witness_classical_not_convex`, the violation for the classical definition. See [the general equivalence theorem](lean/CondeMerino/RankSubset.lean), [the classical counterexample theorem](lean/CondeMerino.lean), and the [updated axiom audit](lean/audit/axioms.txt). An independent AI-assisted audit using Fable 5.2 reproduced the finite calculations by a different algorithm; this is not external peer review.
+
 ## Reproduce
 
 From the repository root, with Lean 4.36.0 (pinned in `lean/lean-toolchain`):
@@ -42,6 +47,7 @@ cd lean
 lake build
 lake env lean Audit.lean
 lake env leanchecker --fresh --verbose CondeMerino
+python3 tools/verify_release.py --paranoid
 ```
 
 For the more extensive verification, see [the Lean README](lean/README.md). The recorded audit reports only standard Lean axioms (`propext`, `Classical.choice`, `Quot.sound`) for the final theorem. The Lean package has no external Lake dependencies. The recorded finite verification is separate from the conventional proofs of the additional results.
@@ -51,18 +57,15 @@ From the repository root, the Python checks can also be reproduced with the stan
 ```sh
 python3 finite/verify.py
 python3 verify_convexity.py
+python3 lean/tools/subset_check.py
 ```
 
-## Recent literature
-
-As recently as November 11, 2026, Benedek Váli's paper [The Merino–Welsh conjecture for sparse and dense graphs](https://arxiv.org/abs/2611.15008) discusses the convexity statement as a conjectured strengthening of Merino–Welsh, without reporting a general counterexample.
-
-This provides evidence that the conjecture was still treated as unresolved in recent literature, although historical priority remains unconfirmed.
+See [the search record](finite/search-notes.md) and [supplementary exploratory scripts](supplementary/README.md). The search was bounded; it was not a census of all small graphs or a proof of minimality.
 
 ## Research status and attribution
 
-The 19-vertex disproof has a complete Lean formalization and recorded successful kernel checks. The planar and infinite-family results are not Lean-formalized. This work has not undergone external peer review. The precise overlap with Hiraishi, Imai, Moriyama, Okamura and Shiroshita's 2019 proceedings paper, *Smallest Counterexamples for Convexity and Log-concavity of the Tutte Polynomial*, remains unresolved because its full text was not obtained. No claim of first-discovery priority or minimality is made. Independent review is welcome.
+The 19-vertex disproof has a complete Lean formalization and recorded successful kernel checks. The planar and infinite-family results are not Lean-formalized. This work has not undergone external peer review. The precise overlap with Hiraishi, Imai, Moriyama, Okamura and Shiroshita's 2019 proceedings paper, *Smallest Counterexamples for Convexity and Log-concavity of the Tutte Polynomial*, remains unresolved because its full text was not obtained. Recent work by Benedek Váli ([arXiv:2611.15008](https://arxiv.org/abs/2611.15008), November 2026) discusses the convexity strengthening; this is not conclusive evidence of priority. No claim of first-discovery priority or minimality is made. Independent review is welcome.
 
 Research directed by Luis Gonzalez, with Astra 6.2 through OpenAI Codex used for AI-assisted mathematical discovery, proof development, computations and formalization.
 
-Contact: [@100xluis on X](https://x.com/100xluis or nftprogrammer@gmail.com).
+Contact: [nftprogrammer@gmail.com](mailto:nftprogrammer@gmail.com) · [@100xluis on X](https://x.com/100xluis).

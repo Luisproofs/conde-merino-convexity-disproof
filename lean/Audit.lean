@@ -27,3 +27,22 @@ import CondeMerino
 #print axioms CondeMerino.witness_not_convex
 #print axioms CondeMerino.counterexample
 #print axioms CondeMerino.not_publishedConjecture
+
+#print axioms CondeMerino.representative_eq_iff
+#print axioms CondeMerino.representative_fixed_iff
+#print axioms CondeMerino.componentCount_eq
+#print axioms CondeMerino.graphicRank_eq
+#print axioms CondeMerino.graphicRank_mono
+#print axioms CondeMerino.rank_insert
+#print axioms CondeMerino.rank_contract
+#print axioms CondeMerino.rank_le_size
+#print axioms CondeMerino.mem_edgeMasks
+#print axioms CondeMerino.nodup_edgeMasks
+#print axioms CondeMerino.selections_eq_subsets
+#print axioms CondeMerino.tutte_eq_rankSubset
+#print axioms CondeMerino.tutte_eq_classicalTutte
+#print axioms CondeMerino.tutte_eval_eq_rankSubset
+#print axioms CondeMerino.Completion.realCommRing
+#print axioms CondeMerino.tutteFunction_eq_classical
+#print axioms CondeMerino.classical_exact_excess
+#print axioms CondeMerino.witness_classical_not_convex

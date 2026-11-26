@@ -1,5 +1,6 @@
 import CondeMerino.Arithmetic
-import CondeMerino.Real
+import CondeMerino.RealRing
+import CondeMerino.RankSubset
 
 namespace CondeMerino
 
@@ -84,5 +85,34 @@ theorem counterexample :
 
 theorem not_publishedConjecture : ¬ PublishedConjecture :=
   fun h => witness_not_convex (h witness witness_twoConnected witness_simple witness_simple.1)
+
+/-- The independent ring interpretation uses the same operations as the
+original Cauchy-real evaluator. -/
+theorem evalIn_real (p : Poly) (x y : Real) : p.evalIn x y = p.evalReal x y := by
+  induction p with
+  | one => rfl
+  | xmul p ih => simp only [Poly.evalIn, Poly.evalReal, ih]
+  | ymul p ih => simp only [Poly.evalIn, Poly.evalReal, ih]
+  | add p q ih ij => simp only [Poly.evalIn, Poly.evalReal, ih, ij]
+
+theorem tutteFunction_eq_classical (g : Graph) :
+    tutteFunction g = fun z => classicalTutte g.order g.edges z.1 z.2 := by
+  funext z
+  exact (evalIn_real _ _ _).symm.trans (tutte_eq_classicalTutte g z.1 z.2)
+
+theorem classical_exact_excess :
+    let f := fun x : Rat => classicalTutte witness.order witness.edges x (2-x)
+    2 * f h - f 0 - f endpoint = excess := by
+  have eqP (x : Rat) : classicalTutte witness.order witness.edges x (2-x) = P x :=
+    (tutte_eq_classicalTutte witness x (2-x)).symm.trans (evalIn_rat _ _ _)
+  dsimp only
+  rw [eqP, eqP, eqP]
+  exact exact_excess
+
+/-- The original witness violates real convexity for the literal subset sum. -/
+theorem witness_classical_not_convex :
+    ¬ ConvexOnSegment (fun z => classicalTutte witness.order witness.edges z.1 z.2) := by
+  rw [← tutteFunction_eq_classical]
+  exact witness_not_convex
 
 end CondeMerino

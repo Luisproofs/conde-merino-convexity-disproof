@@ -16,6 +16,19 @@ $$
 
 Here $P(0)=280024$. The two other values and the full degree-20 restriction polynomial are included in the certificate. The formal convexity statement quantifies over every pair of **real** points on the segment and every real weight between zero and one. Its negation follows by inserting the displayed rational points into that inequality. [Final statement and proof](CondeMerino.lean) · [Exact values](CondeMerino/Arithmetic.lean)
 
+## Equality with the classical Tutte polynomial
+
+For every finite undirected multigraph, Lean proves the bivariate identity
+
+$$
+T_G(x,y)=\sum_{A\subseteq E(G)}
+  (x-1)^{k(A)-k(E(G))}(y-1)^{|A|+k(A)-|V(G)|}.
+$$
+
+Here $k(A)$ counts the walk components of the spanning subgraph, including isolated vertices. The sum indexes subsets by Boolean masks of the edge positions. Lean proves that each mask of the correct length occurs exactly once, so parallel edges can be chosen independently. The theorem holds over any commutative ring. Its real specialization identifies the entire bivariate function used in the convexity proof with the subset sum. The theorems `classical_exact_excess` and `witness_classical_not_convex` give the rational certificate and the real convexity violation directly for that sum. [Universal identity](CondeMerino/RankSubset.lean) · [Counterexample for the classical definition](CondeMerino.lean)
+
+The rank proof counts each component at its least vertex. Inserting an edge between distinct components removes exactly one such representative. Contracting a nonloop decreases rank by one even though the implementation keeps the vacated vertex as an isolated label. Splitting the subsets according to whether they contain the selected edge then proves the loop, bridge and ordinary-edge rules directly from the sum. [Graphic rank](CondeMerino/GraphicRank.lean) · [Ring operations on the Cauchy reals](CondeMerino/RealRing.lean)
+
 ## Reproduce the verification
 
 Install the toolchain specified in `lean-toolchain` (Lean 4.36.0). The Lake package has no external dependencies. From the directory containing `lakefile.toml` run
@@ -47,11 +60,3 @@ The auxiliary labels left isolated by contraction contribute no edges. The graph
 ## Historical scope
 
 The overlap with Hiraishi, Imai, Moriyama, Okamura and Shiroshita’s 2019 work on Tutte convexity remains unresolved. The accessible project report does not specify both the relevant line and the graph hypotheses. Historical priority and the smallest possible order of a counterexample remain open questions for this release. [2019 symposium program](https://www.opt.mist.i.u-tokyo.ac.jp/hj2019/wp-content/uploads/sites/3/2019/04/program19.pdf) · [Project report](https://kaken.nii.ac.jp/ja/file/KAKENHI-PROJECT-16K12392/16K12392seika.pdf)
-
-### Independent verification and limitations
-
-An independent AI-assisted audit using Fable 5.2 reproduced the exact Tutte polynomial calculations using a different computational method and found no mathematical errors.
-
-The Lean certificate verifies the counterexample using a recursive deletion–contraction definition of the Tutte polynomial. Its equivalence to the classical rank-subset definition relies on a standard mathematical theorem that is not separately formalized in this project.
-
-No confirmed prior disproof was identified. Historical priority remains unresolved, particularly regarding Hiraishi et al. (2019).
