@@ -59,4 +59,4 @@ The 19-vertex disproof has a complete Lean formalization and recorded successful
 
 Research directed by Luis Gonzalez, with Astra 6.2 through OpenAI Codex used for AI-assisted mathematical discovery, proof development, computations and formalization.
 
-Contact: [@100xluis on X](https://x.com/100xluis).
+Contact: [@100xluis on X](https://x.com/100xluis or nftprogrammer@gmail.com).
