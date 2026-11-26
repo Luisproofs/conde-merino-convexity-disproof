@@ -47,3 +47,11 @@ The auxiliary labels left isolated by contraction contribute no edges. The graph
 ## Historical scope
 
 The overlap with Hiraishi, Imai, Moriyama, Okamura and Shiroshita’s 2019 work on Tutte convexity remains unresolved. The accessible project report does not specify both the relevant line and the graph hypotheses. Historical priority and the smallest possible order of a counterexample remain open questions for this release. [2019 symposium program](https://www.opt.mist.i.u-tokyo.ac.jp/hj2019/wp-content/uploads/sites/3/2019/04/program19.pdf) · [Project report](https://kaken.nii.ac.jp/ja/file/KAKENHI-PROJECT-16K12392/16K12392seika.pdf)
+
+### Independent verification and limitations
+
+An independent AI-assisted audit using Fable 5.2 reproduced the exact Tutte polynomial calculations using a different computational method and found no mathematical errors.
+
+The Lean certificate verifies the counterexample using a recursive deletion–contraction definition of the Tutte polynomial. Its equivalence to the classical rank-subset definition relies on a standard mathematical theorem that is not separately formalized in this project.
+
+No confirmed prior disproof was identified. Historical priority remains unresolved, particularly regarding Hiraishi et al. (2019).
