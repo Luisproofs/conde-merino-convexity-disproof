@@ -1,0 +1,6 @@
+D (432, -312, 372, -196, 82, -20, 2)
+C (864, -1836, 2622, -2569, 1840, -963, 360, -91, 14, -1)
+L' L'' sum -173/72 12451/5184 -5/5184
+certified M(middle)-M(endpoint) times 10^14 lies between 60 61
+certified M(middle)-M(endpoint) times 10^14 lies between 94 95
+All exact checks passed.

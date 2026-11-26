@@ -1,0 +1,3 @@
+Rank–nullity check counted 1,073,741,824 edge subsets.
+All 21 coefficients agree. All 19 vertex deletions are connected.
+Exact midpoint excess: 26123280769243048353292998299952433382036731393/730750818665451459101842416358141509827966271488

@@ -1,0 +1,27 @@
+'CondeMerino.walk_iff_joined' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.connected_iff_walk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.tutte_loop' depends on axioms: [propext]
+'CondeMerino.tutte_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.tutte_ordinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.tutte_nil' does not depend on any axioms
+'CondeMerino.closed_five' does not depend on any axioms
+'CondeMerino.chain_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.finite_square_steps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.counts' does not depend on any axioms
+'CondeMerino.witness_simple' does not depend on any axioms
+'CondeMerino.witness_twoConnected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.witness_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.eval_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.evaluation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.value_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.value_mid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.value_end' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.exact_excess' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.excess_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.violates_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.Completion.bounded_of_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.Completion.ofRat_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.evalReal_ofRat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.witness_not_convex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CondeMerino.not_publishedConjecture' depends on axioms: [propext, Classical.choice, Quot.sound]

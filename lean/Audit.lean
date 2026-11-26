@@ -1,0 +1,29 @@
+import CondeMerino
+
+#print axioms CondeMerino.walk_iff_joined
+#print axioms CondeMerino.connected_iff_walk
+#print axioms CondeMerino.tutte_loop
+#print axioms CondeMerino.tutte_bridge
+#print axioms CondeMerino.tutte_ordinary
+#print axioms CondeMerino.tutte_nil
+#print axioms CondeMerino.closed_five
+#print axioms CondeMerino.chain_coefficients
+#print axioms CondeMerino.finite_square_steps
+#print axioms CondeMerino.counts
+#print axioms CondeMerino.witness_simple
+#print axioms CondeMerino.witness_twoConnected
+#print axioms CondeMerino.witness_coefficients
+#print axioms CondeMerino.eval_restrict
+#print axioms CondeMerino.evaluation
+#print axioms CondeMerino.value_zero
+#print axioms CondeMerino.value_mid
+#print axioms CondeMerino.value_end
+#print axioms CondeMerino.exact_excess
+#print axioms CondeMerino.excess_gt
+#print axioms CondeMerino.violates_midpoint
+#print axioms CondeMerino.Completion.bounded_of_cauchy
+#print axioms CondeMerino.Completion.ofRat_le
+#print axioms CondeMerino.evalReal_ofRat
+#print axioms CondeMerino.witness_not_convex
+#print axioms CondeMerino.counterexample
+#print axioms CondeMerino.not_publishedConjecture

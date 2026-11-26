@@ -1,0 +1,16 @@
+$ lake env lean --version
+Lean (version 4.36.0, x86_64-unknown-linux-gnu, commit 611c117bfaf7b7ae1cfcf246ce6fba31e8f509e9, Release)
+$ lake build
+✔ [2/20] Built CondeMerino.Graph (834ms)
+✔ [4/20] Built CondeMerino.Tutte (765ms)
+✔ [6/20] Built CondeMerino.Real (2.2s)
+✔ [8/20] Built CondeMerino.Restriction (1.1s)
+✔ [10/20] Built CondeMerino.Witness (5.6s)
+✔ [12/20] Built CondeMerino.SquareChains (675ms)
+✔ [14/20] Built CondeMerino.Minors (23s)
+✔ [16/20] Built CondeMerino.Arithmetic (948ms)
+✔ [18/20] Built CondeMerino (863ms)
+Build completed successfully (20 jobs).
+$ lake env leanchecker --fresh --verbose CondeMerino
+replaying CondeMerino with --fresh
+Fresh replay of the entire module and its imports exited successfully.
