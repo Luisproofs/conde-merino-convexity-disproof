@@ -1,4 +1,5 @@
 # A counterexample to the Conde–Merino convexity conjecture
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24562484.svg)](https://doi.org/10.5281/zenodo.24562484)
 
 An AI-assisted mathematical investigation of Conjecture 2.4 in Rodolfo Conde and Criel Merino's 2009 paper [Comparing the Number of Acyclic and Totally Cyclic Orientations with that of Spanning Trees of a Graph](https://www.matem.unam.mx/~merino/online_papers/conjecture_5.pdf).
 
