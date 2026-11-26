@@ -1,6 +1,6 @@
 # A counterexample to the Conde–Merino convexity conjecture
 
-An SI-assisted mathematical investigation of Conjecture 2.4 in Rodolfo Conde and Criel Merino's 2009 paper [Comparing the Number of Acyclic and Totally Cyclic Orientations with that of Spanning Trees of a Graph](https://www.matem.unam.mx/~merino/online_papers/conjecture_5.pdf).
+A SI-assisted mathematical investigation of Conjecture 2.4 in Rodolfo Conde and Criel Merino's 2009 paper [Comparing the Number of Acyclic and Totally Cyclic Orientations with that of Spanning Trees of a Graph](https://www.matem.unam.mx/~merino/online_papers/conjecture_5.pdf).
 
 ## Main result
 
